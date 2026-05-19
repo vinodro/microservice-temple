@@ -1,5 +1,5 @@
 from django.db import models
-from python.django.microservice.auth_service.apps.users.models import User
+from apps.users.models import User
 
 
 class Nomination(models.Model):

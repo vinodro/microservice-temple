@@ -13,7 +13,6 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 from importlib.resources import path
 from pathlib import Path
 from datetime import timedelta
-from graphene_django.views import GraphQLView
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -164,6 +163,4 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-urlpatterns += [
-    path('graphql/', GraphQLView.as_view(graphiql=True)),
-]
+AUTH_USER_MODEL = 'users.User'
