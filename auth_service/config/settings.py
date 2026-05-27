@@ -80,6 +80,11 @@ REST_FRAMEWORK = {
     ),
 }
 
+REST_AUTH = {
+    'USE_JWT': True,
+    'JWT_SERIALIZER': 'dj_rest_auth.serializers.JWTSerializer',
+}
+
 ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
@@ -108,6 +113,7 @@ CORS_ALLOW_ALL_ORIGINS = True
 SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=30),
     'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
+    'ROTATE_REFRESH_TOKENS': True,
 }
 
 # GraphQL
